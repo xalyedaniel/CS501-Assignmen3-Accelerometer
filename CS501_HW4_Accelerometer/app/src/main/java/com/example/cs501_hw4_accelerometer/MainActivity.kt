@@ -17,7 +17,11 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     private lateinit var sensorManager: SensorManager
     private var accelerometerSensor: Sensor? = null
     private lateinit var sensitivitySeekBar: SeekBar
-    private var threshold = 1.0f // Default
+    //private var threshold = 1.0f // Default
+
+    companion object {
+        var threshold = 1.0f
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,4 +73,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {}  //don't really need this in this assignment
+
+
 }
