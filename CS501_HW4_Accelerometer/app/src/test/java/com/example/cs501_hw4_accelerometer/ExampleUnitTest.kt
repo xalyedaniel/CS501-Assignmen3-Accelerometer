@@ -14,4 +14,10 @@ class ExampleUnitTest {
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
     }
+
+    @Test
+    fun addition_companionValue() {
+        assertEquals(MainActivity.threshold, 1.0f)
+        // no unit test, nothing to be tested
+    }
 }
